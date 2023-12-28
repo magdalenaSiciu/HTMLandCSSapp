@@ -375,3 +375,7 @@ body {
   font-size: 1.6rem;
   color: #777;
 }
+
+.gallery-item img {
+  display: block;
+}
