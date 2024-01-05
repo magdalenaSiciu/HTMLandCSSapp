@@ -1,37 +1,24 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Rubik", sans-serif;
-  line-height: 1;
-  font-weight: 400;
-  color: #555;
-}
-
-/**********************/
-/*Header */
-/**********************/
+/**************************/
+/* HEADER */
+/**************************/
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fdf2e9;
-
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 
 .logo {
   height: 2.2rem;
 }
 
-/**********************/
-/*Navigation */
-/**********************/
+/**************************/
+/* NAVIGATION */
+/**************************/
 
 .main-nav-list {
   list-style: none;
@@ -56,7 +43,7 @@ body {
 }
 
 .main-nav-link.nav-cta:link,
-.main-nav-link.nav.cta:visited {
+.main-nav-link.nav-cta:visited {
   padding: 1.2rem 2.4rem;
   border-radius: 9px;
   color: #fff;
@@ -64,13 +51,32 @@ body {
 }
 
 .main-nav-link.nav-cta:hover,
-.main-nav-link.nav.cta:active {
+.main-nav-link.nav-cta:active {
   background-color: #cf711f;
 }
 
-/**********************/
-/*Hero Section*/
-/**********************/
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/**************************/
+/* HERO SECTION */
+/**************************/
 
 .section-hero {
   background-color: #fdf2e9;
@@ -104,11 +110,11 @@ body {
   margin-top: 8rem;
 }
 
-.delivered-img {
+.delivered-imgs {
   display: flex;
 }
 
-.delivered-img img {
+.delivered-imgs img {
   height: 4.8rem;
   width: 4.8rem;
   border-radius: 50%;
@@ -116,7 +122,7 @@ body {
   border: 3px solid #fdf2e9;
 }
 
-.delivered-img img:last-child {
+.delivered-imgs img:last-child {
   margin: 0;
 }
 
@@ -130,9 +136,38 @@ body {
   font-weight: 700;
 }
 
-/**********************/
-/*How it works Section*/
-/**********************/
+/**************************/
+/* FEATURED IN SECTION */
+/**************************/
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+/**************************/
+/* HOW IT WORKS SECTION */
+/**************************/
 
 .section-how {
   padding: 9.6rem 0;
@@ -170,63 +205,73 @@ body {
 }
 
 .step-img-box::before {
-  width: 75%;
-  /* height: 60%; */
-
-  /* 60% of parent's width */
-  padding-bottom: 75%;
+  width: 60%;
+  padding-bottom: 60%;
 
   background-color: #fdf2e9;
   z-index: -2;
 }
 
 .step-img-box::after {
-  width: 60%;
-  padding-bottom: 60%;
+  width: 45%;
+  padding-bottom: 45%;
   background-color: #fae5d3;
   z-index: -1;
 }
 
 .step-img {
-  width: 30%;
+  width: 35%;
   /* z-index: 10; */
 }
 
-/**********************/
-/*Featured Section*/
-/**********************/
-
-.section-featured {
-  padding: 4.8rem;
-}
-
-.heading-featured-in {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.75px;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 2.4rem;
-  color: #888;
-}
-
-.logos {
-  display: flex;
-  justify-content: space-around;
-}
-
-.logos img {
-  height: 3.2rem;
-  filter: brightness(0);
-  opacity: 50%;
-}
-
-/**********************/
-/*Meals*/
-/**********************/
+/**************************/
+/* MEALS SECTION */
+/**************************/
 
 .section-meals {
   padding: 9.6rem 0;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+.tag--vegan {
+  background-color: #94d82d;
+}
+.tag--paleo {
+  background-color: #ffd43b;
 }
 
 .meal-title {
@@ -250,54 +295,14 @@ body {
   gap: 1.6rem;
 }
 
-.meal-img {
-  width: 100%;
-}
-
 .meal-icon {
   height: 2.4rem;
   width: 2.4rem;
   color: #e67e22;
 }
 
-.tag {
-  display: inline-block;
-  padding: 0.4rem 0.8rem;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-
-  color: #333;
-  border-radius: 100px;
-  font-weight: 600;
-}
-
-.tag--vegetarian {
-  background-color: #51cf66;
-}
-
-.tag--vegan {
-  background-color: #94d82d;
-}
-
-.tag--paleo {
-  background-color: #ffd43b;
-}
-
-.meal-tags {
-  margin-bottom: 12px;
-  display: flex;
-  gap: 0.4rem;
-}
-
-.meal {
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  border-radius: 11px;
-  overflow: hidden;
-  transition: all 0.4s;
-}
-
-.meal-content {
-  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+.meal-img {
+  width: 100%;
 }
 
 .all-recipes {
@@ -305,30 +310,10 @@ body {
   font-size: 1.8rem;
 }
 
-.link:link,
-.link:visited {
-  display: inline-block;
-  text-decoration: none;
-  color: #e67e22;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 2px;
-  transition: all 0.3s;
-}
+/**************************/
+/* TESTIMONIALS SECTION */
+/**************************/
 
-.link:hover,
-.link:active {
-  color: #cf711f;
-  border-bottom: 1px solid transparent;
-}
-
-.meal:hover {
-  transform: translateY(-1.2rem);
-  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
-}
-
-/**********************/
-/*Testimonials*/
-/**********************/
 .section-testimonials {
   background-color: #fdf2e9;
   display: grid;
@@ -385,9 +370,9 @@ body {
   transform: scale(1.1);
 }
 
-/**********************/
-/*Pricing*/
-/**********************/
+/**************************/
+/* MEALS SECTION */
+/**************************/
 
 .section-pricing {
   padding: 9.6rem 0;
@@ -434,8 +419,8 @@ body {
 
 .plan-name {
   color: #cf711f;
-  font-size: 2rem;
   font-weight: 600;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.75;
   margin-bottom: 3.2rem;
@@ -460,18 +445,21 @@ body {
   color: #6f6f6f;
 }
 
-.plan-sign-up {
+.plan-sing-up {
   text-align: center;
   margin-top: 4.8rem;
 }
 
-.featire-section {
-  padding-bottom: 9.6rem;
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
 }
+
 .feature-icon {
   color: #e67e22;
-  height: 2.4rem;
-  width: 2.4rem;
+  height: 3.2rem;
+  width: 3.2rem;
   background-color: #fdf2e9;
   margin-bottom: 3.2rem;
   padding: 1.6rem;
@@ -490,21 +478,11 @@ body {
   line-height: 1.8;
 }
 
-.plan-details {
-  font-size: 1.6rem;
-  line-height: 1.6;
-  text-align: center;
-  margin-bottom: 6.6rem;
-}
+/**************************/
+/* CTA SECTION */
+/**************************/
 
-/**********************/
-/*CTA*/
-/**********************/
 .section-cta {
-  /* top / right / bottom / left */
-  /* padding: 9.6rem 0 12.8rem 0; */
-
-  /* top / horizontal / left */
   padding: 4.8rem 0 12.8rem;
 }
 
@@ -524,7 +502,6 @@ body {
 }
 
 .cta .heading-secondary {
-  /* color: #45260a; */
   color: inherit;
   margin-bottom: 3.2rem;
 }
@@ -582,9 +559,10 @@ body {
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
 
-/**********************/
-/*Footer*/
-/**********************/
+/**************************/
+/* FOOTER */
+/**************************/
+
 .footer {
   padding: 12.8rem 0;
   border-top: 1px solid #eee;
