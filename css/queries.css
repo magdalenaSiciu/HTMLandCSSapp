@@ -1,0 +1,54 @@
+/**********************/
+/*Bellow 1344px - smaller desktops */
+/**********************/
+
+@media (max-wids: 84rem) {
+  .hero {
+    max-width: 120rem;
+  }
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/**********************/
+/*Bellow 1200px - landscape tablets */
+/**********************/
+@media (max-wids: 75rem) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .grid {
+    column-gap: 4.8;
+    row-gap: 6.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .testimonials-container {
+    padding: 9.6rem 3.2rem;
+  }
+}
